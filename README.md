@@ -25,5 +25,7 @@ A **fintech-focused portfolio project** simulating **global payment transactions
 
 ---
 
-## 📂 Project Structure
+##  🔗 Link
+https://zingy-gumdrop-9a3c45.netlify.app/
+
 

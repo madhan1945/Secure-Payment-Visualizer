@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Secure Payment Visualizer — Portfolio</title>
+  <meta name="description" content="Secure Payment Visualizer — demo of global payments, accessibility & responsive UI" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand" aria-label="VisaNet Visualizer">
+        <span class="logo">VisaNet<span class="accent">Visualizer</span></span>
+      </div>
+      <nav class="nav" role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#visual">Transactions</a></li>
+          <li><a href="#features">Security</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <a class="resume-btn" href="Madhan's Resume.pdf" download>Download Resume</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Secure. Reliable. Global.</h1>
+          <p class="lead">
+            Visualizing how modern payment networks move value around the world. Designed with accessibility, responsiveness, and production-ready UI/UX.
+          </p>
+          <div class="hero-cta">
+            <button id="simulateBtn" class="btn primary">Simulate Transaction</button>
+            <button id="aiSummaryBtn" class="btn">Generate Summary (AI)</button>
+          </div>
+          <p class="small">Built with HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="false">
+          <div class="map-card" role="img" aria-label="World map with animated transactions">
+    <!-- Replace old SVG placeholder with actual world map image -->
+            <img src="map1.webp" alt="World map illustration" class="map-img" />
+            <div id="flows" class="flows" aria-hidden="true"></div>
+            <div class="counter" aria-live="polite">
+              <div class="count-label">Transactions processed</div>
+              <div id="txCount" class="tx-count">0</div>
+              <div class="progress" aria-hidden="true">
+                <div id="txProgress" class="progress-bar" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Transactions list -->
+    <section id="visual" class="transactions container">
+      <h2>Recent Transactions</h2>
+      <div id="txList" class="tx-list" role="list" aria-label="Recent transactions">
+        <!-- JS injects transaction items -->
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features container">
+      <h2>Security Highlights</h2>
+      <div class="feature-grid" role="list">
+        <article class="card" role="listitem" tabindex="0" aria-label="Encrypted Transactions">
+          <div class="icon">🔒</div>
+          <h3>Encrypted Transactions</h3>
+          <p>End-to-end encryption protects cardholder data in transit and at rest.</p>
+        </article>
+        <article class="card" role="listitem" tabindex="0" aria-label="Global Reach">
+          <div class="icon">🌍</div>
+          <h3>Global Reach</h3>
+          <p>High scalability to process transactions across geographies in milliseconds.</p>
+        </article>
+        <article class="card" role="listitem" tabindex="0" aria-label="Real-time Processing">
+          <div class="icon">⚡</div>
+          <h3>Real-time Processing</h3>
+          <p>Near-instant authorization and settlement pipelines ensure smooth commerce.</p>
+        </article>
+        <article class="card" role="listitem" tabindex="0" aria-label="Reliability">
+          <div class="icon">🛡️</div>
+          <h3>High Reliability</h3>
+          <p>Redundancy and monitoring deliver high availability for mission-critical flows.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about container">
+      <h2>About this Project</h2>
+      <p>
+        This is a portfolio project intended to demonstrate UI/UX skills relevant to payments and fintech.
+        The frontend uses accessible HTML/CSS and fetches analytics from serverless endpoints (transactions and AI-generated summaries).
+      </p>
+      <p class="muted">No real card data is used — all transactions are simulated for demo purposes.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <form id="contactForm" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input id="name" name="name" required aria-required="true" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Send (static)</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> J Madhan Kumaar — <a href="https://github.com/madhan1945" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
